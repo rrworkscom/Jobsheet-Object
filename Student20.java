@@ -1,10 +1,21 @@
 public class Student20 {
+
     String name;
     String nim;
-    String grade;
     double gpa;
+    String grade;
 
-    void showInformation () {
+    public Student20() {
+    }
+
+    public Student20(String nm, String nim, double gpa, String grd) {
+        name = nm;
+        this.nim = nim;
+        this.gpa = gpa;
+        grade = grd;
+    }
+
+    void showInformation() {
         System.out.println("Name: " + name);
         System.out.println("NIM: " + nim);
         System.out.println("GPA: " + gpa);
@@ -34,5 +45,4 @@ public class Student20 {
             return "Poor Performance";
         }
     }
-
 }
