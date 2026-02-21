@@ -16,7 +16,11 @@ public class Student20 {
     }
 
     void updateGPA(double newGPA) {
-        gpa = newGPA;
+        if (newGPA >= 0.0 && newGPA <= 4.0) {
+            gpa = newGPA;
+        } else {
+            System.out.println("GPA is invalid. Must be between 0.0 and 4.0");
+        }
     }
 
     String performanceIndex() {
