@@ -15,5 +15,9 @@ public class StudentMain20 {
         Student20 std2 = new Student20("Annisa Nabila", "2141720160", 3.25, "TI 2L");
         std2.updateGPA(3.30);
         std2.showInformation();
+
+        Student20 stdRatih = new Student20("Ratih Ramadhani", "25410706007", 3.84, "SIB 1G");
+        stdRatih.showInformation();
+
     }
 }
