@@ -1,40 +1,36 @@
 package Practicum3;
 
+import java.util.Scanner;
+
 public class StudentDemo20 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Student20[] arrayOfStudent = new Student20[3];
-        arrayOfStudent[0] = new Student20();
-        arrayOfStudent[0].nim = "244107060033";
-        arrayOfStudent[0].name = "AGNES TITANIA KINANTI";
-        arrayOfStudent[0].grade = "SIB-1E";
-        arrayOfStudent[0].gpa = (float) 3.75;
+        String dummy;
 
-        arrayOfStudent[1] = new Student20();
-        arrayOfStudent[1].nim = "2341720172";
-        arrayOfStudent[1].name = "ACHMAD MAULANA HAMZAH";
-        arrayOfStudent[1].grade = "TI-2A";
-        arrayOfStudent[1].gpa = (float) 3.36;
+        for (int i = 0; i < 3; i++) {
+            arrayOfStudent[i] = new Student20();
+        
+        System.out.println("Input data for student #" + (i + 1));
+        System.out.print("NIM     : ");
+        arrayOfStudent[i].nim = sc.nextLine();
+        System.out.print("Name    : ");
+        arrayOfStudent[i].name = sc.nextLine();
+        System.out.print("Grade   : ");
+        arrayOfStudent[i].grade = sc.nextLine();
+        System.out.print("GPA     : ");
+        dummy = sc.nextLine();
+        arrayOfStudent[i].gpa = Float.parseFloat(dummy);
+        System.out.println("-----------------------------------");
+        }
 
-        arrayOfStudent[2] = new Student20();
-        arrayOfStudent[2].nim = "244107023006";
-        arrayOfStudent[2].name = "DIRHAMAWAN PUTRANTO";
-        arrayOfStudent[2].grade = "TI-2E";
-        arrayOfStudent[2].gpa = (float) 3.80;
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Data for student #" + (i + 1));
+            System.out.println("NIM     : " + arrayOfStudent[i].nim);
+            System.out.println("Name    : " + arrayOfStudent[i].name);
+            System.out.println("Grade   :" + arrayOfStudent[i].grade);
+            System.out.println("GPA     : " + arrayOfStudent[i].gpa);
 
-        System.out.println("NIM      : " + arrayOfStudent[0].nim);
-        System.out.println("Name     : " + arrayOfStudent[0].name);
-        System.out.println("Grade    : " + arrayOfStudent[0].grade);
-        System.out.println("GPA      : " + arrayOfStudent[0].gpa);
-        System.out.println("-----------------------------------");
-        System.out.println("NIM      : " + arrayOfStudent[1].nim);
-        System.out.println("Name     : " + arrayOfStudent[1].name);
-        System.out.println("Grade    : " + arrayOfStudent[1].grade);
-        System.out.println("GPA      : " + arrayOfStudent[1].gpa);
-        System.out.println("-----------------------------------");
-        System.out.println("NIM      : " + arrayOfStudent[2].nim);
-        System.out.println("Name     : " + arrayOfStudent[2].name);
-        System.out.println("Grade    : " + arrayOfStudent[2].grade);
-        System.out.println("GPA      : " + arrayOfStudent[2].gpa);
-        System.out.println("-----------------------------------");
+        }
     }
 }
