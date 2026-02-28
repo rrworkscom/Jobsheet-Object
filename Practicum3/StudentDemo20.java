@@ -8,6 +8,7 @@ public class StudentDemo20 {
         Student20[] arrayOfStudent = new Student20[3];
         String dummy;
 
+
         for (int i = 0; i < 3; i++) {
             arrayOfStudent[i] = new Student20();
         
@@ -26,10 +27,8 @@ public class StudentDemo20 {
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Data for student #" + (i + 1));
-            System.out.println("NIM     : " + arrayOfStudent[i].nim);
-            System.out.println("Name    : " + arrayOfStudent[i].name);
-            System.out.println("Grade   :" + arrayOfStudent[i].grade);
-            System.out.println("GPA     : " + arrayOfStudent[i].gpa);
+            arrayOfStudent[i].printInfo();
+            System.out.println("-----------------------------------");
 
         }
     }
