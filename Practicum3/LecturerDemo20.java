@@ -14,6 +14,8 @@ public class LecturerDemo20 {
         boolean gender;
         int age;
 
+        LecturerData20 data = new LecturerData20();
+
         for (int i = 0; i < arrayOfLecturer.length; i++) {
             arrayOfLecturer[i] = new Lecturer20();
 
@@ -32,10 +34,11 @@ public class LecturerDemo20 {
             arrayOfLecturer[i].addData(code, name, gender, age);
         }
 
-        for(int i = 0; i < arrayOfLecturer.length; i++) {
-            System.out.println("Data for lecturer #" + (i + 1));
-            arrayOfLecturer[i].printInfo();
-            System.out.println("---------------------------------");
-        }
+        data.dataAllLecturers(arrayOfLecturer);
+        data.numberOfLecturersPerGender(arrayOfLecturer);
+        data.averageAgeOfLecturersPerGender(arrayOfLecturer);
+        data.oldestLecturers(arrayOfLecturer);
+        data.youngestLecturers(arrayOfLecturer);
     }
 }
+
